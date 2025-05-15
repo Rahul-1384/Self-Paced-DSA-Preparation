@@ -13,8 +13,11 @@ public class Lec_2 {
         }
         System.out.print("Enter the Target element to be found in Array: ");
         int target = sc.nextInt();
-
+        // Linear Search
         System.out.println(LinearSearch(arr, target));
+
+        // Minimum number
+        System.out.println(minimumNumber(arr));
     }
     public static int LinearSearch(int[] arr, int target){
         for(int i=0;i<arr.length;i++){
@@ -23,5 +26,18 @@ public class Lec_2 {
             }
         }
         return -1;
+    }
+
+    public static int minimumNumber(int[] arr){
+        if(arr.length == 0){
+            return 0;
+        }
+        int min = Integer.MAX_VALUE;
+        for(int i=0;i<arr.length;i++){
+            if(min > arr[i]){
+                min = arr[i];
+            }
+        }
+        return min;
     }
 }
