@@ -2,7 +2,7 @@ import java.util.Arrays;
 
 public class CycleSort {
     public static void main(String[] args) {
-        int[] arr = {1,2,3,4,5};
+        int[] arr = {1,4,2,5};
         cycleSort(arr);
         System.out.println(Arrays.toString(arr));
     }
