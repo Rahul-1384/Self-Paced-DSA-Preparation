@@ -1,6 +1,6 @@
 import java.util.Arrays;
 
-public class InternalWorking {
+public class InternalWorkingArrays {
     public static void main(String[] args) {
         int[] a = {1,2,3,4,5};  // New object created
         int[] b = {1,2,3,4,5};  // New object created
