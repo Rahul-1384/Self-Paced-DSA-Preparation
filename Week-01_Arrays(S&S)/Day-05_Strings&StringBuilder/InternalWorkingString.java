@@ -1,4 +1,4 @@
-public class InternalWorking {
+public class InternalWorkingString {
     public static void main(String[] args) {
         String a = "Rahul";
         String b = a;
