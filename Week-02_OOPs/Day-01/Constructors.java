@@ -17,12 +17,20 @@ class Student{
         this.name = name;
         this.marks = marks;
     }
+
+    // Copy Constructor (Copies the data from another object)
+    Student(Student s){
+        rno = s.rno;
+        name = s.name;
+        marks = s.marks;
+    }
 }
 
 public class Constructors {
     public static void main(String[] args) {
-        Student s1 = new Student(20, "Rahul", 50);
-        Student s2 = new Student();
+        Student s1 = new Student(20, "Rahul", 50);  // Parameterized Constructor
+        Student s2 = new Student(); // Default Constructor
+        Student s3 = new Student(s1);   // Copy Constructor
         // Object 1
         System.out.println(s1.rno);
         System.out.println(s1.name);
@@ -32,5 +40,10 @@ public class Constructors {
         System.out.println(s2.rno);
         System.out.println(s2.name);
         System.out.println(s2.marks);
+
+        // Object 3
+        System.out.println(s3.rno);
+        System.out.println(s3.name);
+        System.out.println(s3.marks);
     }
 }
