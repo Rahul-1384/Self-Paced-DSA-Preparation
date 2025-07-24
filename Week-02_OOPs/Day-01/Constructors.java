@@ -13,9 +13,9 @@ class Student{
 
     // Parameterized constructor
     Student(int rno, String name, int marks){
-        rno = rno;
-        name = name;
-        marks = marks;
+        this.rno = rno;
+        this.name = name;
+        this.marks = marks;
     }
 }
 
