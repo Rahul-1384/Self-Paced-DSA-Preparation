@@ -1,14 +1,21 @@
 import java.util.Arrays;
 
-public class ClassAndObjects {
-    public static void main(String[] args) {
-        Student[] students = new Student[5];
-        Student rahul;
-        
+
+// Class (Template)
+class Car{
+    String color;
+    int speed;
+
+    void drive(){
+        System.out.println("Car Driven at " + speed + " km/h");
     }
 }
-class Student{
-    int rno;
-    String name;
-    float marks;
+
+public class ClassAndObjects {
+    public static void main(String[] args) {
+        Car ferrari = new Car();    // Instantiated (ferrari Object)
+        ferrari.color = "Red";
+        ferrari.speed = 300;
+        ferrari.drive();
+    }
 }
