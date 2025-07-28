@@ -4,6 +4,11 @@
 // 1) Access parent class variables when parent and child class have same name of variables.
 class Animal1{
     String type = "Animal";
+
+    // Object class (Superclass of all class)
+    // Animal1(){
+    //     super();
+    // }
 }
 
 class Dog1 extends Animal1{

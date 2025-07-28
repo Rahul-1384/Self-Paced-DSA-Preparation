@@ -15,6 +15,11 @@ class Box {
         this.w = w;
         this.h = h;
     }
+    public Box(Box obj){
+        this.l = obj.l;
+        this.w = obj.w;
+        this.h = obj.h;
+    }
 }
 
 // Child class
@@ -29,6 +34,12 @@ class BoxWeight extends Box {
         super(l, w, h); // Super is used to access the constructor of parent class.
         this.weight = weight;
     }
+    public BoxWeight(BoxWeight obj){
+        this.l = obj.l;
+        this.w = obj.w;
+        this.h = obj.h;
+        this.weight = obj.weight;
+    }
 }
 
 
@@ -36,5 +47,8 @@ public class Main {
     public static void main(String[] args) {
         BoxWeight box = new BoxWeight(2,3,4,5);
         System.out.println(box.w);
+
+        Box obj1 = new BoxWeight(20,30,40,50);
+        System.out.println(obj1.l);
     }
 }
