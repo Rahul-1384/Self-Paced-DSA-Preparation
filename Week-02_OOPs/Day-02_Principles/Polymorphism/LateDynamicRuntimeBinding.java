@@ -14,6 +14,7 @@ class Dog extends Animal{
 public class LateDynamicRuntimeBinding {
     public static void main(String[] args) {
         Animal obj = new Dog();
+        // Late binding (Method call resolved at runtime)
         obj.sound();
     }
 }
