@@ -1,27 +1,26 @@
 import java.util.Arrays;
 
-public class CustomArrayList {
-    private int[] data;
+public class CustomGenericArrayList<T extends Number> {
+    private Object[] data;
     private static int DEFAULT_SIZE = 10;
     private int size = 0;
 
-    CustomArrayList(){
-        this.data = new int[DEFAULT_SIZE];
+    CustomGenericArrayList(){
+        data = new Object[DEFAULT_SIZE];
     }
 
-    public void add(int num){
+    public void add(T num){
         if(isFull()){
             resize();
         }
         data[size++] = num;
     }
 
-    private boolean isFull(){
+    private boolean isFull() {
         return size == DEFAULT_SIZE;
     }
-
     private void resize(){
-        int[] temp = new int[data.length * 2];
+        Object[] temp = new Object[data.length * 2];
         for(int i=0;i<data.length;i++){
             temp[i] = data[i];
         }
@@ -32,16 +31,16 @@ public class CustomArrayList {
         size--;
     }
 
+    public T get(int idx){
+        return (T)data[idx];
+    }
+
     public int size(){
         return size;
     }
 
-    public void set(int idx, int value){
+    public void set(int idx, T value){
         data[idx] = value;
-    }
-
-    public int get(int idx){
-        return data[idx];
     }
 
     @Override
@@ -50,15 +49,11 @@ public class CustomArrayList {
     }
 
     public static void main(String[] args) {
-        CustomArrayList list = new CustomArrayList();
+        CustomGenericArrayList<Integer> list = new CustomGenericArrayList<>();
         list.add(2);
         list.add(4);
-        list.add(6);
-
         System.out.println(list);
         System.out.println(list.size());
-        // But the problem with Custom ArrayList is that we can 
-        // only insert int values not string, char, float type.
-        // In order to achieve this we use Generics.
+        System.out.println(list.get(1));
     }
 }
