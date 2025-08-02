@@ -6,7 +6,7 @@ public class RotateArray {
         int k = 2;
 
         rotateRight(arr, k);
-        // rotateLeft(arr, k);
+        rotateLeft(arr, k);
         System.out.println(Arrays.toString(arr));
     }
     public static void reverse(int[] arr, int start, int end){
