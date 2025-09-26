@@ -1,7 +1,7 @@
 public class InfiniteArray {
     public static void main(String[] args) {
-        int[] arr = {1,2,3,4,5,6,7,8};
-        int target = 7;
+        int[] arr = { 3, 5, 7, 9, 10, 90, 100, 130, 140, 160, 170 };
+        int target = 10;
         System.out.println(findRange(arr, target));
     }
     public static int findRange(int[] arr, int target){
@@ -12,10 +12,9 @@ public class InfiniteArray {
             end = end + (end - start + 1) * 2;
             start = temp;
         }
-        return infiniteArray(arr, target, start, end);
+        return binarySearch(arr, start, end, target);
     }
-
-    public static int infiniteArray(int[] arr, int target, int start, int end){
+    public static int binarySearch(int[] arr, int start, int end, int target){
         while(start <= end){
             int mid = start + (end - start) / 2;
             if(arr[mid] == target) return mid;
